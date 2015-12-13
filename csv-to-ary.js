@@ -9,7 +9,6 @@ function makeCsvToAry(txt)
 		for(var b = 0; b < bry.length; b++)
 		{
 			var cel = bry[b];
-			
 			if(cel.substr(0, 1) == '"' && cel.substr(cel.length - 1, 1) != '"')
 			{
 				// またがっている
@@ -22,12 +21,8 @@ function makeCsvToAry(txt)
 						break;
 					}
 				}
-				bufAry.push(cel);
 			}
-			else
-			{
-				bufAry.push(cel);
-			}
+			bufAry.push(cel);
 		}
 		aryAry.push(bufAry);
 	}
