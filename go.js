@@ -1,7 +1,7 @@
 $('#btn').click(function()
 {
 	// get
-	var aryAry = makeCsvToAry($('#input').val().trim());
+	var aryAry = makeCsvToAry($('#input').val().trim(), ',');
 	// output
 	var buf = "<table>\n";
 	for(var i = 0; i < aryAry.length; i++)
