@@ -1,11 +1,11 @@
-function makeCsvToAry(txt)
+function makeCsvToAry(txt, dlm)
 {
 	var ary = txt.split("\n");
 	var aryAry = [];
 	for(var i = 0; i < ary.length; i++)
 	{
 		var bufAry = [];
-		var bry = ary[i].split(",");
+		var bry = ary[i].split(dlm);
 		for(var b = 0; b < bry.length; b++)
 		{
 			var cel = bry[b];
@@ -15,7 +15,7 @@ function makeCsvToAry(txt)
 				while(b <= bry.length - 2)
 				{
 					var cel_next = bry[++b];
-					cel += ',' + cel_next;
+					cel += dlm + cel_next;
 					if(cel_next.substr(-1, 1) == '"' && !cel_next.match(/[^"]""$/))
 					{
 						break;
